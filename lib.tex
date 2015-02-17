@@ -1,0 +1,46 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}      
+\usepackage[francais]{babel}
+% Layout and figures
+%\usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry}
+\usepackage{subfigure}
+\usepackage{rotating}
+% Units and numbers
+\usepackage[squaren, Gray]{SIunits}
+\usepackage{sistyle}
+\usepackage[autolanguage]{numprint}
+% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+% Links
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+% New commands
+\newcommand{\annexe}{\part{Annexes}\appendix}
+\newcommand{\biblio}[1]{\bibliographystyle{plain}\bibliography{#1}\nocite{*}}
+
+\newcommand{\doctitle}[1]{
+	\title{LSINF1225 - Projet d'informatique}
+	\subtitle{#1}
+	\author{\textbf{Groupe T}\\
+	\textsc{Gérard} Louis (0000-00-00)\\
+	\textsc{Gillon} Bastien (0000-00-00)\\
+	\textsc{Jacques} Thibault (0000-00-00)\\
+	\textsc{Paris} Antoine (3158-13-00)\\
+	\textsc{Ramelot} Sylvain (0000-00-00)}
+	\date{\today}
+
+	\begin{document}
+
+	\maketitle
+	%\tableofcontents
+}
