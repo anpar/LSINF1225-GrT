@@ -1,7 +1,80 @@
 \input{../lib.tex}
 \doctitle{Partie 1 : ORM}
-\section{Faits élémentaires}
-% TODO
+\section{Entités et faits élémentaires}
+Dans un bar, on distingue plusieurs \textit{entités}.
+On a avant tout le \textbf{client} et le \textbf{serveur}, qui
+constituent les ``utilisateurs'' (aussi bien du bar que de
+l'application). On a ensuite, la commande, la table et l'addition.
+Enfin, on a une entité \textit{avis} qui représente l'avis (optionnel)
+d'un client sur une boisson (cfr. extension ``ratings'').
+
+Passons maintenant aux faits élémentaires pour chacune
+de ces entités.
+
+\paragraph{Serveur}
+\begin{itemize}
+	\item Un serveur possède un login ;
+	\item Un serveur possède un mot de passe ;
+	\item Un serveur possède un nom ;
+	\item Un serveur prend des commandes.
+\end{itemize}
+
+\paragraph{Client}
+\begin{itemize}
+	\item Un client possède un login ;
+	\item Un client est assis à une table ;
+	\item Un client possède un mot de passe ;
+	\item Un client peut donner son avis.
+\end{itemize}
+
+\paragraph{Boisson}
+\begin{itemize}
+	\item Une boisson possède une description ;
+	\item Une boisson possède un prix ;
+ 	\item Une boisson possède un nom ;
+	\item Une boisson possède un volume ;
+	\item Une boisson possède une quantité en stock ;
+	\item Une boisson possède un ID ;
+	\item Une boisson possède une icône ;
+	\item Une boisson possède un stock seuil ;
+	\item Une boisson possède un stock maximum ;
+	\item Une boisson appartient à une catégorie ;
+	\item Une boisson possède une sous-catégorie.
+\end{itemize}
+
+\paragraph{Commande}
+\begin{itemize}
+	\item Une commande est passée par une table ;
+	\item Une commande est prise par un serveur ;
+	\item Une commande est liée à une addition ;
+	\item Une commande est associée à des boissons ;
+	\item Une commande possède à un numéro de commande ;
+	\item Une commande possède une date et une heure ;
+	\item Une commande possède des quantités de boissons.
+\end{itemize}
+
+\paragraph{Table}
+\begin{itemize}
+	\item Une table accueille des clients ;
+	\item Une table passe des commandes ;
+	\item Une table possède un numéro de table.
+\end{itemize}
+
+\paragraph{Addition}
+\begin{itemize}
+	\item Une addition possède une date/heure ;
+	\item Une addition possède un numéro d’addition ;
+	\item Une addition comprend des commandes.
+\end{itemize}
+
+\paragraph{Avis}
+\begin{itemize}
+	\item Un avis est associé à une boisson ;
+	\item Un avis contient une cote sur 5 ;
+	\item Un avis peut contenir un commentaire ;
+	\item L'avis est donné par un client.
+\end{itemize}
+
 \section{Diagramme ORM}
 % TODO
 \section{Population}
