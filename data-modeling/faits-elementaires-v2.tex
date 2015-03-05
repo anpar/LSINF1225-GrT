@@ -1,0 +1,63 @@
+\input{../lib.tex}
+\doctitle{Entités et faits élementaire}
+
+\paragraph{Serveur (identifiant) anparis}
+\begin{itemize}
+	\item ...\textbf{s'appelle} Prénom (string) ``Antoine'' ;
+	\item ...\textbf{possède} Mot de passe serveur (string) ``ninja007'' ;
+	\item ...\textbf{prend} Commande (numéro) 4523.
+\end{itemize}
+
+\paragraph{Client (identifiant) kmens}
+\begin{itemize}
+	\item ...\textbf{possède} Mot de passe client (string) ORM\_is\_life ;
+	\item ...\textbf{est assis à} Table (numéro) 4.
+\end{itemize}
+
+\paragraph{Boisson (référence) JUP33}
+\begin{itemize}		
+	\item ...\textbf{a} Nom (string) ``Jupiler'' ;
+	\item ...\textbf{est caractérisée par} Description (string)
+	``La Jupiler est une bière belge blonde de fermentation
+	basse de type pils'' ;
+	\item ...\textbf{coûte} Prix (euros) 2.50 ;
+	\item ...\textbf{contient} Volume (cl) 33 ;
+	\item ...\textbf{appartient à} Catégorie (string) ``Bières'' ;
+	\item ...\textbf{appartient à} Sous-catégorie (string) ``blondes'' ;
+	\item ...\textbf{est représentée par} Icone (adresse) icon/jup.jpg ;
+	\item ...\textbf{est présente en} Stock (chiffre) 50 ;
+	\item ...\textbf{possède un} Stock minimum (chiffre) 24 ;
+	\item ...\textbf{possède un} Stock maximum (chiffre) 200.
+\end{itemize}
+
+\paragraph{Commande (numéro) 4523}
+\begin{itemize}
+	\item ...\textbf{est passée par} Table (numéro) 4 ;
+	\item ...\textbf{est prise par} Serveur (identifiant) anparis ;
+	\item ...\textbf{est liée à} Addition (numéro) 623 ;
+	\item ...\textbf{contient} Boisson (référence) JUP33 \textbf{en quantité}
+	Quantité (chiffre) 3 ;		
+	\item ...\textbf{a été passée à} Date commande (string) ``05/03/2015 à 20:57''.
+\end{itemize}
+
+\paragraph{Addition (numéro) 623}
+\begin{itemize}
+	\item ...\textbf{est prise à} Date addition (string) ``05/03/2015 à 21:12'' ;
+	\item ...\textbf{contient} Commande (numéro) 4523.
+\end{itemize}
+
+\paragraph{Table (numéro) 4}
+\begin{itemize}
+	\item ...\textbf{accueille} Client (identifiant) kmens ;
+	\item ...\textbf{passe} Commande (numéro) 4523 ;
+\end{itemize}
+
+\paragraph{Avis (numéro) 714}
+\begin{itemize}
+	\item ...\textbf{est associé à} Boisson (référence) JUP33;
+	\item ...\textbf{contient} Cote (chiffre) 5 ;
+	\item ...\textbf{contient} Commentaire (string) ``'Excellente bière !'' ;
+	\item ...\textbf{est donné par} Client (identifiant) kmens.
+\end{itemize}
+
+\input{../footer.tex}
