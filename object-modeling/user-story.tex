@@ -1,0 +1,227 @@
+\input{../lib.tex}
+\doctitle{Récits utilisateur}
+
+\section{Types d'utilisateurs}
+\begin{itemize}
+	\item[{$\bullet$}] \textbf{Serveur} : Personne utilisant l'application
+	afin de gérer les commandes d'une table et créer l'addition de celle-ci.
+	\item[{$\bullet$}] \textbf{Client enregistré} : Personne utilisant l'
+	application afin d'accéder à une carte des boissons avec différentes 
+	informations afin de pouvoir commander et à partir de laquelle il peut
+	émettre son avis sur une boisson via une note et un commentaire .
+	\item[{$\bullet$}] \textbf{Client non enregistré\footnote{Si le type
+	de client n'est pas précisé, il englobe les deux types.}} : Personne
+	utilisant l'application afin d'accéder à une carte des boissons avec
+	différentes informations afin de pouvoir commander au serveur.
+\end{itemize}
+
+\section{Users stories}
+\subsection{Gestion des utilisateurs}
+
+\begin{description}
+	\item[Gestion des utilisateurs] : Toutes les stories liées à la gestion des utilisateurs
+\end{description}
+
+\begin{center}
+	% S'identifier (Accéder aux fonctionnalités en s'identifiant) (1J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{S'identifier} & \multicolumn{1}{p{0.7cm}|}{1J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant qu'utilisateur, je veux pouvoir
+			me connecter pour accéder à des fonctionnalités supplémentaires 
+			dépendant de mon statut (client/serveur) et créer un compte si 
+			je n'en possède pas en tant que client.} \\
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	% Gestion de son profil (1J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Gestion de son profil } & \multicolumn{1}{p{0.7cm}|}{1J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant qu'utilisateur enregistré, je veux pouvoir
+			modifier mes informations tel que mon mot de passe afin de sécuriser mon compte
+			en cas de problème de mot de passe.} \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Affichage}
+\begin{description}
+	\item[Affichage] : Toutes les stories liées à l'affichage principal des menus.
+\end{description}
+
+\begin{center}
+	%Accéder aux fonctionnalités sans s'identifer (1,5J) 
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Accéder aux fonctionnalités sans s’identifier} & \multicolumn{1}{p{0.7cm}|}{1.5J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que client occasionnel, je veux pouvoir
+			accéder à la carte sans devoir créer un compte afin de pouvoir choisir
+			la boisson que je désirerais commander.} \\
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	%Affichage de carte de boissons (1J)
+	\begin{tabular}{lll}
+		\hline
+			\multicolumn{2}{|p{14cm}}{Affichage de carte de boissons } & \multicolumn{1}{|p{0.7cm}|}{1J} \\
+		\hline
+			\multicolumn{1}{|p{7cm}}{Client} & \multicolumn{2}{|p{7cm}|}{Serveur} \\ 
+		\hline
+			\multicolumn{1}{|p{7cm}}{En tant que client, je veux voir toutes les boissons disponibles, 
+			afin de pouvoir faire une commande au serveur } & \multicolumn{2}{|p{7cm}|}{En tant que 
+			serveur, je veux pouvoir afficher la carte des boissons afin de pour pouvoir prendre la commande d'une table.} \\ 
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	%Affichage des détails d'une boisson
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Affichage des détails d'une boisson} & \multicolumn{1}{p{0.7cm}|}{1,5J}\\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant qu'utilisateur, je veux voir les détails d'une 
+			boisson afin d'avoir de plus amples informations à propos de celle-ci et accéder 
+			aux notes et commentaires d'autres clients.}\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Fonctionnalités du serveur}
+\begin{description}
+	\item[Fonctionnalités du serveur] : Toutes les stories liées aux fonctionnalités
+	unique aux serveurs tel que la gestion des commandes et du stock.
+\end{description}
+
+\begin{center}
+	% Page d'accueil (1,5J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Page d'accueil} & \multicolumn{1}{p{0.7cm}|}{1,5J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que serveur, une fois connecté, je veux 
+			accéder à une page d'accueil afin de pouvoir accéder soit à la carte, à la 
+			recherche avancée, à l'inventaire ou aux commandes.} \\
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	% Prendre la commande d'une table (2J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Prendre la commande d'une table} & \multicolumn{1}{p{0.7cm}|}{1J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir prendre la commande
+			pour une table depuis la carte afin de faire parvenir celle-ci au bar dans le but 
+			de servir la table.} \\
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	% Consulter la commande en cours (2J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Consulter la commande en cours} & \multicolumn{1}{p{0.7cm}|}{2J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir consulter
+			la commande en cours d'une table, afin de pouvoir y ajouter/supprimer une
+			boisson et afin de pouvoir modifier une commande en cours.} \\
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	% Addition/facturation (1J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Addition/facturation} & \multicolumn{1}{p{0.7cm}|}{1J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir faire l'addition 
+			d'une table afin de leur permettre de payer leurs consommations.} \\
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	% Gestion du stock
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Gestion du stock} & \multicolumn{1}{p{0.7cm}|}{1J}\\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir accéder à l'inventaire
+			afin de connaître le stock disponible, le seuil et le maximum de chaque boisson dans
+			le bar ainsi qu' un résumé des boissons sous le seuil et des boissons totalement
+			épuisées et mettre toutes ces informations à jour lors de nouvel arrivage de boissons.} \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Fonctionnalités du client enregistré}
+\begin{description}
+	\item[Fonctionnalités] : Toutes les stories liées aux fonctionnalités uniques aux clients enregistrés tel que la notation d'une boisson.
+\end{description}
+
+\begin{center}
+	% Rating/Cotation (1,5J)
+	\begin{tabular}{ll}
+		\hline
+			\multicolumn{1}{|p{14cm}|}{Rating/Cotation} & \multicolumn{1}{p{0.7cm}|}{1,5J} \\ 
+		\hline
+			\multicolumn{2}{|p{15cm}|}{En tant que client enregistré, je veux pouvoir
+			noter/coter une boissons et/ou y ajouter un commentaire afin d'exprimer mon avis sur la boisson.} \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Recherches avancées}
+\begin{description}
+	\item[Recherches avancées] : Toutes les stories liées aux recherches dans la carte pour faciliter le parcours de celle-ci.
+\end{description}
+
+\begin{center}
+	% Affichage de carte de boissons (1J)
+	\begin{tabular}{lll}
+		\hline
+			\multicolumn{2}{|p{14cm}}{Fonctions de recherche} & \multicolumn{1}{|p{0.7cm}|}{1J}\\
+		\hline
+			\multicolumn{1}{|p{7cm}}{Client} & \multicolumn{2}{|p{7cm}|}{Serveur}\\ 
+		\hline
+			\multicolumn{1}{|p{7cm}}{En tant que client je veux pouvoir rechercher
+			rapidement une boissons sans devoir feuilleter la carte, afin de faire
+			un choix pour commander ou simplement me renseigner.} 
+			& \multicolumn{2}{|p{7cm}|}{En tant que serveur, je veux avoir accès 
+			à une recherche rapide (outil de recherche) afin d'ajouter rapidement 
+			une boisson à une commande.}\\ 
+		\hline
+	\end{tabular}
+
+	\vspace{1cm}
+	
+	% Affichage de carte de boissons (1J)
+	\begin{tabular}{lll}
+		\hline
+			\multicolumn{2}{|p{14cm}}{Recherches avancées} & \multicolumn{1}{|p{0.7cm}|}{2J} \\
+		\hline
+			\multicolumn{1}{|p{7cm}}{Client} & \multicolumn{2}{|p{7cm}|}{Serveur} \\ 
+		\hline
+			\multicolumn{1}{|p{7cm}}{En tant que client je veux pouvoir faire des
+			recherches avancées grâce à des mots, critères spécifiques, afin de
+			pouvoir naviguer plus facilement dans la carte.} 
+			& \multicolumn{2}{|p{7cm}|}{En tant que serveur, je veux pouvoir faire
+			des recherches avancées grâce à des mots-clé, critères spécifiques afin
+			de proposer des choix pertinents aux clients.} \\ 
+		\hline
+	\end{tabular}
+\end{center}
+
+\input{../footer.tex}

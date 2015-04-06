@@ -1,0 +1,114 @@
+\input{../lib.tex}
+\doctitle{Cartes CRC}
+
+\paragraph{Remarque} Les setters et getters
+n'ont pas été repris dans les cartes CRC.
+
+\begin{center}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & User \\
+	\hline
+		\textbf{Description :} & Représente l'utilisateur de l'application. \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Se connecter. & \\
+		Se déconnecter. & \\
+		Modifier son mot de passe. & \\
+		Modifier la langue de l'application. & \\
+		Initialiser l'afficheur de carte. & MenuDisplayer \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & Customer \\
+	\hline
+		\textbf{Description :} & Représente un client du bar. \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Donner son avis sur une boisson (note et commentaire). & \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & Waiter \\
+	\hline
+		\textbf{Description :} & Représente un serveur du bar. \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Initialiser une nouvelle commande pour une table. & Order \\
+		Initialiser une nouvelle facture pour une table. & Bill \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & MenuDisplayer \\
+	\hline
+		\textbf{Description :} & Représente ``l'afficheur'' de carte (outil de recherche
+		inclus). \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Effectuer une recherche de boissons selon
+		différents critères. &  \\
+		Afficher les résultats de la recherche effectuée. & \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & Order \\
+	\hline
+		\textbf{Description :} & Représente une commande d'une table. \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Ajouter une boisson en une certaine quantité à la commande. & \\
+		Supprimer une boisson de la commande. & \\
+		Modifier la quantité d'une boisson de la commande. & \\
+		Clotûrer une commande. & \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & Bill \\
+	\hline
+		\textbf{Description :} & Représente une addition d'une table. \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Afficher l'addition. & \\
+		Cloturer l'addition (une fois payée). & \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|p{6cm}p{6cm}|}
+	\hline
+		\textbf{Classe :} & Drink \\
+	\hline
+		\textbf{Description :} & Représente une boisson. \\
+	\hline
+		\textbf{Responsabilités :} & \textbf{Collaboration :} \\
+		Calculer sa note moyenne. & \\
+	\hline		
+\end{tabular}
+
+\vspace{0.5cm}
+
+\end{center}
+
+\input{../footer.tex}
