@@ -1,6 +1,32 @@
 \input{../lib.tex}
 \doctitle{Rapport : modélisation des objets}
 
+%\chapter{Choix de conception}
+
+\section{Diagramme de classes UML}
+
+\section{Diagrammes de séquences UML}
+\subsection{Afficher la carte pour un client et chercher des boissons}
+Lorsqu'un client désire afficher la carte, il utilisera une méthode de la classe MenuDisplayer appelée display(). Cette méthode ira chercher toutes les informations nécessaires sur les boissons, en utilisant des méthodes de la classe Drink sur une collection d'objets Drink, pour ensuite les afficher. 
+
+La méthode suivante, setCriterion(), n'apparait pas dans notre Diagramme de classe car ce n'est pas une méthode à proprement parler. Elle représente les différents "setter" qui vont être utilisés pour initialisé les attributs des filtres de MenuDisplayer. 
+
+Lorsque le client veut chercher une boisson, il initialise ses critères de recherche (setCriterion()), un display() est de nouveau utilisé et MenuDisplayer retourne chercher des informations sur les boissons nécessaires pour les afficher. 
+
+\subsection{Ajout de boissons à une commande}
+
+Lorsqu'un serveur désire ajouter une boisson à une commande, la démarche de recherche de la boisson est identique à celle du client. Une fois la boisson trouvée, il l'ajoute à l'objet order. Ensuite, si la commande est terminée, il utilise la méthode close() de la classe Order pour terminer la commande.
+
+
+\subsection{Initialisation d'une addition par un serveur}
+Lorsqu'un serveur veut initialiser une addition, il utilisera la méthode print() de la classe Bill sur un Objet bill. L'objet bill ira alors rechercher toutes les commandes dont l'addition est composée. Elle ira ensuite chercher toutes les informations sur les boissons dont les commandes sont composées.
+
+Une fois l'addition faite et payée, le serveur utilise la méthode close() de l'objet bill pour supprimer toutes les commandes liées à cet addition. Une fois cela fait, un message "billErase" est retourné.
+
+\subsection{Ajout d'une note à une boisson par un client} 
+
+Lorsqu'un client désire noter une boisson, il recherchera la boisson de la même manière que précédemment. Une fois la boisson (drink 1) trouvée, l'objet utilisera la méthode AddAvis() de la classe Client.
+
 % TODO
 
 \input{../footer.tex}
