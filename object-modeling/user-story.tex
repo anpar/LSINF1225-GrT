@@ -3,14 +3,14 @@
 
 \section{Types d'utilisateurs}
 \begin{itemize}
-	\item[{$\bullet$}] \textbf{Serveur} : Personne utilisant l'application
+	\item[{$\bullet$}] \textbf{Serveur} : personne utilisant l'application
 	afin de gérer les commandes d'une table et créer l'addition de celle-ci.
-	\item[{$\bullet$}] \textbf{Client enregistré} : Personne utilisant l'
+	\item[{$\bullet$}] \textbf{Client enregistré} : personne utilisant l'
 	application afin d'accéder à une carte des boissons avec différentes 
-	informations afin de pouvoir commander et à partir de laquelle il peut
-	émettre son avis sur une boisson via une note et un commentaire .
+	informations afin de pouvoir commander et 
+	émettre son avis sur une boisson via une note et/ou un commentaire .
 	\item[{$\bullet$}] \textbf{Client non enregistré\footnote{Si le type
-	de client n'est pas précisé, il englobe les deux types.}} : Personne
+	de client n'est pas précisé, il englobe les deux types.}} : personne
 	utilisant l'application afin d'accéder à une carte des boissons avec
 	différentes informations afin de pouvoir commander au serveur.
 \end{itemize}
@@ -19,7 +19,7 @@
 \subsection{Gestion des utilisateurs}
 
 \begin{description}
-	\item[Gestion des utilisateurs] : Toutes les stories liées à la gestion des utilisateurs
+	\item[Gestion des utilisateurs] : toutes les stories liées à la gestion des utilisateurs
 \end{description}
 
 \begin{center}
@@ -30,7 +30,7 @@
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant qu'utilisateur, je veux pouvoir
 			me connecter pour accéder à des fonctionnalités supplémentaires 
-			dépendant de mon statut (client/serveur) et créer un compte si 
+			dépendant de mon statut (client/serveur) et pour créer un compte si 
 			je n'en possède pas en tant que client.} \\
 		\hline
 	\end{tabular}
@@ -44,14 +44,14 @@
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant qu'utilisateur enregistré, je veux pouvoir
 			modifier mes informations tel que mon mot de passe afin de sécuriser mon compte
-			en cas de problème de mot de passe.} \\
+			en cas d'oubli du mot de passe.} \\
 		\hline
 	\end{tabular}
 \end{center}
 
 \subsection{Affichage}
 \begin{description}
-	\item[Affichage] : Toutes les stories liées à l'affichage principal des menus.
+	\item[Affichage] : toutes les stories liées à l'affichage principal des menus.
 \end{description}
 
 \begin{center}
@@ -62,7 +62,7 @@
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant que client occasionnel, je veux pouvoir
 			accéder à la carte sans devoir créer un compte afin de pouvoir choisir
-			la boisson que je désirerais commander.} \\
+			la boisson que je désire commander.} \\
 		\hline
 	\end{tabular}
 
@@ -75,7 +75,7 @@
 		\hline
 			\multicolumn{1}{|p{7cm}}{Client} & \multicolumn{2}{|p{7cm}|}{Serveur} \\ 
 		\hline
-			\multicolumn{1}{|p{7cm}}{En tant que client, je veux voir toutes les boissons disponibles, 
+			\multicolumn{1}{|p{7cm}}{En tant que client, je veux voir toutes les boissons disponibles 
 			afin de pouvoir faire une commande au serveur } & \multicolumn{2}{|p{7cm}|}{En tant que 
 			serveur, je veux pouvoir afficher la carte des boissons afin de pour pouvoir prendre la commande d'une table.} \\ 
 		\hline
@@ -89,16 +89,16 @@
 			\multicolumn{1}{|p{14cm}|}{Affichage des détails d'une boisson} & \multicolumn{1}{p{0.7cm}|}{1,5J}\\ 
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant qu'utilisateur, je veux voir les détails d'une 
-			boisson afin d'avoir de plus amples informations à propos de celle-ci et accéder 
-			aux notes et commentaires d'autres clients.}\\
+			boisson afin d'avoir de plus amples informations à propos de celle-ci et d'accéder 
+			aux notes et aux commentaires d'autres clients.}\\
 		\hline
 	\end{tabular}
 \end{center}
 
 \subsection{Fonctionnalités du serveur}
 \begin{description}
-	\item[Fonctionnalités du serveur] : Toutes les stories liées aux fonctionnalités
-	unique aux serveurs tel que la gestion des commandes et du stock.
+	\item[Fonctionnalités du serveur] : toutes les stories liées aux fonctionnalités
+	uniques aux serveurs telle que la gestion des commandes et du stock.
 \end{description}
 
 \begin{center}
@@ -108,8 +108,8 @@
 			\multicolumn{1}{|p{14cm}|}{Page d'accueil} & \multicolumn{1}{p{0.7cm}|}{1,5J} \\ 
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant que serveur, une fois connecté, je veux 
-			accéder à une page d'accueil afin de pouvoir accéder soit à la carte, à la 
-			recherche avancée, à l'inventaire ou aux commandes.} \\
+			pouvoir accéder à une page d'accueil afin d'atteindre soit à la carte soit à la 
+			recherche avancée soit à l'inventaire soit aux commandes.} \\
 		\hline
 	\end{tabular}
 
@@ -121,8 +121,8 @@
 			\multicolumn{1}{|p{14cm}|}{Prendre la commande d'une table} & \multicolumn{1}{p{0.7cm}|}{1J} \\ 
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir prendre la commande
-			pour une table depuis la carte afin de faire parvenir celle-ci au bar dans le but 
-			de servir la table.} \\
+			d'une table depuis la carte afin de faire parvenir celle-ci au bar dans le but 
+			de servir ces clients.} \\
 		\hline
 	\end{tabular}
 
@@ -135,7 +135,7 @@
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir consulter
 			la commande en cours d'une table, afin de pouvoir y ajouter/supprimer une
-			boisson et afin de pouvoir modifier une commande en cours.} \\
+			boisson et de pouvoir modifier une commande en cours.} \\
 		\hline
 	\end{tabular}
 
@@ -161,14 +161,14 @@
 			\multicolumn{2}{|p{15cm}|}{En tant que serveur, je veux pouvoir accéder à l'inventaire
 			afin de connaître le stock disponible, le seuil et le maximum de chaque boisson dans
 			le bar ainsi qu' un résumé des boissons sous le seuil et des boissons totalement
-			épuisées et mettre toutes ces informations à jour lors de nouvel arrivage de boissons.} \\
+			épuisées et de mettre toutes ces informations à jour lors de nouveaux arrivages de boissons.} \\
 		\hline
 	\end{tabular}
 \end{center}
 
 \subsection{Fonctionnalités du client enregistré}
 \begin{description}
-	\item[Fonctionnalités] : Toutes les stories liées aux fonctionnalités uniques aux clients enregistrés tel que la notation d'une boisson.
+	\item[Fonctionnalités] : toutes les stories liées aux fonctionnalités uniques des clients enregistrés telle que la note d'une boisson.
 \end{description}
 
 \begin{center}
@@ -178,14 +178,14 @@
 			\multicolumn{1}{|p{14cm}|}{Rating/Cotation} & \multicolumn{1}{p{0.7cm}|}{1,5J} \\ 
 		\hline
 			\multicolumn{2}{|p{15cm}|}{En tant que client enregistré, je veux pouvoir
-			noter/coter une boissons et/ou y ajouter un commentaire afin d'exprimer mon avis sur la boisson.} \\
+			noter/coter une boisson et/ou y ajouter un commentaire afin d'exprimer mon avis sur la boisson.} \\
 		\hline
 	\end{tabular}
 \end{center}
 
 \subsection{Recherches avancées}
 \begin{description}
-	\item[Recherches avancées] : Toutes les stories liées aux recherches dans la carte pour faciliter le parcours de celle-ci.
+	\item[Recherches avancées] : toutes les stories liées aux recherches dans la carte pour faciliter le parcours de celle-ci.
 \end{description}
 
 \begin{center}
@@ -197,7 +197,7 @@
 			\multicolumn{1}{|p{7cm}}{Client} & \multicolumn{2}{|p{7cm}|}{Serveur}\\ 
 		\hline
 			\multicolumn{1}{|p{7cm}}{En tant que client je veux pouvoir rechercher
-			rapidement une boissons sans devoir feuilleter la carte, afin de faire
+			rapidement une boisson sans devoir feuilleter la carte, afin de faire
 			un choix pour commander ou simplement me renseigner.} 
 			& \multicolumn{2}{|p{7cm}|}{En tant que serveur, je veux avoir accès 
 			à une recherche rapide (outil de recherche) afin d'ajouter rapidement 
@@ -215,10 +215,10 @@
 			\multicolumn{1}{|p{7cm}}{Client} & \multicolumn{2}{|p{7cm}|}{Serveur} \\ 
 		\hline
 			\multicolumn{1}{|p{7cm}}{En tant que client je veux pouvoir faire des
-			recherches avancées grâce à des mots, critères spécifiques, afin de
+			recherches avancées grâce à des mots-clés et critères spécifiques afin de
 			pouvoir naviguer plus facilement dans la carte.} 
 			& \multicolumn{2}{|p{7cm}|}{En tant que serveur, je veux pouvoir faire
-			des recherches avancées grâce à des mots-clé, critères spécifiques afin
+			des recherches avancées grâce à des mots-clés et critères spécifiques afin
 			de proposer des choix pertinents aux clients.} \\ 
 		\hline
 	\end{tabular}

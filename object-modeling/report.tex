@@ -4,48 +4,48 @@
 
 \section{Diagramme de classes UML}
 \begin{itemize}
-	\item[{$\bullet$}] \textbf{User} : La classe qui a toutes les fonctionnalités de base que requièrent
+	\item[{$\bullet$}] \textbf{User} : cette classe a toutes les fonctionnalités de base que requièrent
 	tous les types d'utilisateurs confondus.
-	\item[{$\bullet$}] \textbf{Customer} : La classe qui représente le client du bar qui est connecté.
+	\item[{$\bullet$}] \textbf{Customer} : cette classe représente le client du bar qui est connecté.
 	Elle contient tous les éléments de la classe "User" avec quelques méthodes/attributs qui lui sont utiles
 	en tant que client connecté.
-	\item[{$\bullet$}] \textbf{Waiter} : Cette classe représente un serveur du bar. Cette classe a les
-	fonctionnalités de base de "User" mais possède ces propres méthodes/attributs pour modifier et créer
+	\item[{$\bullet$}] \textbf{Waiter} : cette classe représente un serveur du bar. Cette classe a les
+	fonctionnalités de base de "User" mais possède ses propres méthodes/attributs pour modifier et créer
 	des commandes ainsi que des additions.
-	\item[{$\bullet$}] \textbf{Drink} : Cette classe représente les boissons de la base de donnée avec
+	\item[{$\bullet$}] \textbf{Drink} : cette classe représente les boissons de la base de données avec
 	des méthodes/attributs utiles. 
-	\item[{$\bullet$}] \textbf{MenuDisplayer} : représente la classe qui permet d'afficher les
+	\item[{$\bullet$}] \textbf{MenuDisplayer} : cette classe permet d'afficher les
 	différentes boissons et de rechercher des boissons en fonction de l'utilisateur. Cette classe a
-	absolument besoin de la classe "Boisson".
-	\item[{$\bullet$}] \textbf{Order} : La classe représentant une commande faite par un serveur. La
-	classe à impérativement besoin de la classe "Boisson" pour pouvoir fonctionner. Elle est utilisée par
+	absolument besoin de la classe "Drink".
+	\item[{$\bullet$}] \textbf{Order} : cette classe représente une commande faite par un serveur. La
+	classe a impérativement besoin de la classe "Drink" pour pouvoir fonctionner. Elle est utilisée par
 	le serveur qui peut créer et modifier une commande.
-	\item[{$\bullet$}] \textbf{Bill} : La classe qui représente une addition. Cette classe à besoin de
-	la classe "Order" pour ainsi faire des opérations comme calculer le total d'une ou plusieurs
-	commandes, sur une collection de commandes. Elle est utilisée par le serveur qui peut a tout moment
+	\item[{$\bullet$}] \textbf{Bill} : cette classe représente une addition. Elle a besoin de
+	la classe "Order" pour faire des opérations comme calculer le total d'une ou plusieurs
+	commandes, sur une collection de commandes. Elle est utilisée par le serveur qui peut, à tout moment,
 	demander l'addition de x commandes.
 \end{itemize}
 \section{Diagrammes de séquences UML}
 \subsection{Afficher la carte pour un client et chercher des boissons}
-Lorsqu'un client désire afficher la carte, il utilisera une méthode de la classe MenuDisplayer appelée display(). Cette méthode ira chercher toutes les informations nécessaires sur les boissons, en utilisant des méthodes de la classe Drink sur une collection d'objets Drink, pour ensuite les afficher. 
+Lorsqu'un client désire afficher la carte, il utilise une méthode de la classe "MenuDisplayer" appelée display(). Cette méthode va chercher toutes les informations nécessaires sur les boissons, en utilisant des méthodes de la classe "Drink" sur une collection d'objets "Drink", pour ensuite les afficher. 
 
-La méthode suivante, setCriterion(), n'apparait pas dans notre Diagramme de classe car ce n'est pas une méthode à proprement parler. Elle représente les différents "setter" qui vont être utilisés pour initialisé les attributs des filtres de MenuDisplayer. 
+La méthode suivante, setCriterion(), n'apparait pas dans notre diagramme de classe car ce n'est pas une méthode à proprement parler. Elle représente les différents "setter" qui vont être utilisés pour initialiser les attributs des filtres de MenuDisplayer. 
 
-Lorsque le client veut chercher une boisson, il initialise ses critères de recherche (setCriterion()), un display() est de nouveau utilisé et MenuDisplayer retourne chercher des informations sur les boissons nécessaires pour les afficher. 
+Lorsque le client veut chercher une boisson, il initialise ses critères de recherche (setCriterion()), un display() est de nouveau utilisé et MenuDisplayer recherche des informations sur les boissons nécessaires pour les afficher. 
 
 \subsection{Ajout de boissons à une commande}
 
-Lorsqu'un serveur désire ajouter une boisson à une commande, la démarche de recherche de la boisson est identique à celle du client. Une fois la boisson trouvée, il l'ajoute à l'objet order. Ensuite, si la commande est terminée, il utilise la méthode close() de la classe Order pour terminer la commande.
+Lorsqu'un serveur désire ajouter une boisson à une commande, la démarche de recherche de la boisson est identique à celle du client. Une fois la boisson trouvée, il l'ajoute à l'objet "Order". Ensuite, si la commande est terminée, il utilise la méthode close() de la classe "Order" pour terminer la commande.
 
 
 \subsection{Initialisation d'une addition par un serveur}
-Lorsqu'un serveur veut initialiser une addition, il utilisera la méthode print() de la classe Bill sur un Objet bill. L'objet bill ira alors rechercher toutes les commandes dont l'addition est composée. Elle ira ensuite chercher toutes les informations sur les boissons dont les commandes sont composées.
+Lorsqu'un serveur veut initialiser une addition, il utilise la méthode print() de la classe "Bill" sur un objet bill. L'objet bill va alors rechercher toutes les commandes dont l'addition est composée. Il va ensuite chercher toutes les informations sur les boissons dont les commandes sont composées.
 
-Une fois l'addition faite et payée, le serveur utilise la méthode close() de l'objet bill pour supprimer toutes les commandes liées à cet addition. Une fois cela fait, un message "billErase" est retourné.
+Une fois l'addition composée et payée, le serveur utilise la méthode close() de l'objet bill pour supprimer toutes les commandes liées à cette addition. Une fois cela fait, un message "billErase" est retourné.
 
 \subsection{Ajout d'une note à une boisson par un client} 
 
-Lorsqu'un client désire noter une boisson, il recherchera la boisson de la même manière que précédemment. Une fois la boisson (drink 1) trouvée, l'objet utilisera la méthode AddAvis() de la classe Client.
+Lorsqu'un client désire noter une boisson, il recherche la boisson de la même manière que précédemment. Une fois la boisson (drink 1) trouvée, l'objet utilise la méthode AddAvis() de la classe "Client".
 
 % TODO
 
