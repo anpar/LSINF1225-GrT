@@ -1,14 +1,4 @@
 \input{../lib.tex}
 \doctitle{Diagramme UML statique}
 	
-\section{Classe du diagram de classes}
-\begin{itemize}
-	\item[{$\bullet$}] \textbf{User} : La classe qui a tous les fonctionnalitées de base que requirent tous types d'utilisateurs confondues.
-	\item[{$\bullet$}] \textbf{Customer} : La classe qui représente le client du bar qui est connecté. Elle contient tous les elements de la classe "User" avec quelque methode/attribut qui lui sont utile en tant que client connecté.
-	\item[{$\bullet$}] \textbf{Waiter} : Cette classe représente un serveur du bar. Cette classe à les fonctionnalités de base de "User" mais possède ces propres methodes/attribut pour modifier et créer des commandes ainsi que des additions.
-	\item[{$\bullet$}] \textbf{Drink} : Cette classe représente les boissons de la base de donnée avec des methode/attribut utile. 
-	\item[{$\bullet$}] \textbf{MenuDisplayer} : représente la classe qui permet d'afficher les différente boissons et fonction des recherches et utilisateur qui l'utilise. Cette classe a absolument besoin de la classe "Boisson".
-	\item[{$\bullet$}] \textbf{Order} : La classe représentant une commande faite par un serveur. La classe à impérativement besoin de la classe "Boisson" pour pouvoir fonctionner. Elle est utilisé par le serveur qui peut créer et modifier une commande.
-	\item[{$\bullet$}] \textbf{Bill} : La classe qui représente une addition. Cette classe à besoin de la classe "Order" pour ainsi faire des opérations comme calculer le total d'une ou plusieurs commandes, sur une collection de commandes. Elles est utilisé par le serveur qui peut a tous moment demander l'addition de x commandes.
-\end{itemize}
 \input{../footer.tex}
